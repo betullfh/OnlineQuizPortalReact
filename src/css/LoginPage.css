@@ -1,0 +1,123 @@
+.register-login {
+    background-color: #c8d8dd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    margin: auto;
+    margin-top: 80px;
+    padding: 30px;
+    width: 1000px;
+    height: 500px;
+    background-image: url("../images/quiz_logo_transparent.png");
+    background-size: 50% 100%; 
+    background-position: left; 
+    background-repeat: no-repeat;
+    border: 10px solid rgba(167, 187, 198, 0.533);
+    border-radius: 16px;
+}
+
+.main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 550px;
+    height: 500px;
+    background-color: #c8d8dd;
+}
+
+.register-form {
+    width: 80%; 
+    margin: auto;
+    background-color: #c8d8dd; 
+    padding: 2px;
+    border-radius: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.input-form {
+    margin-bottom: 20px;
+}
+
+.login-register-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007BFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(90deg, #007BFF, #00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2b527b;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(90deg, #2e6197, #688d94);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.login-choice {
+    text-align: center;
+    margin-top: 15px;
+}
+.actions
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-p {
+    font-size: 14px;
+    color: #001aff;
+    cursor: pointer;
+}
+
+.login-p:hover{
+    color: #133194;
+}
+
+.login-p:active
+{
+    color: #9ca8ac;
+}
