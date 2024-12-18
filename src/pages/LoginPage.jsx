@@ -1,15 +1,24 @@
 import { Grid2, InputAdornment, TextField } from "@mui/material";
-import React from "react";
 import { FaLock, FaUserCircle } from "react-icons/fa";
 import "../css/LoginPage.css";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useFormik } from 'formik'
+
 
 function LoginPage() {
+    const navigate=useNavigate()
+    const [role, setRole] = useState("user");
+  
+
+    
+
   return (
     <div className="register-login">
       <div className="main">
         <h3 className="login-register-title">MindSpark</h3>
-        <form className="register-form">
+        <form  className="register-form">
            
           <div className="input-form">
           <h3 className="login-title">Giriş Yap</h3>
@@ -17,23 +26,22 @@ function LoginPage() {
               <Grid2 container spacing={2}>
                 <TextField
                   id="username"
-                  placeholder="Kullanıcı adı"
+                  placeholder="Ad"
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
                         <FaUserCircle style={{ color: "gray", fontSize:"18px" }} />{" "}
-                        {/* İkon rengi beyaz */}
                       </InputAdornment>
                     ),
                     disableUnderline: true,
                   }}
                   sx={{
-                    marginBottom: "20px",
+                    marginBottom: "10px",
                     borderRadius: "10px",
                     backgroundColor: "#dce6eb", 
                     "& .MuiFilledInput-root": {
                       borderRadius: "10px", 
-                      padding: "0px 15px",
+                      padding: "0px 10px",
                       color: "black", 
                     },
                     "& .MuiInputBase-root": {
@@ -54,18 +62,17 @@ function LoginPage() {
                     startAdornment: (
                       <InputAdornment position="start">
                         <FaLock style={{ color: "gray", fontSize:"18px" }} />{" "}
-                        {/* İkon rengi beyaz */}
                       </InputAdornment>
                     ),
                     disableUnderline: true, 
                   }}
                   sx={{
-                    marginBottom: "20px",
+                    marginBottom: "10px",
                     borderRadius: "10px",
                     backgroundColor: "#dce6eb", 
                     "& .MuiFilledInput-root": {
                       borderRadius: "10px", 
-                      padding: "0px 15px", 
+                      padding: "0px 10px", 
                       color: "black", 
                     },
                     "& .MuiInputBase-root": {
@@ -79,6 +86,29 @@ function LoginPage() {
                   color="primary"
                 />
               </Grid2>
+            </div>
+            <div className="role-selection">
+              <label htmlFor="role" style={{ marginBottom: "12px", fontSize: "16px", marginTop:"10px" }}>
+                
+              </label>
+              <select
+                id="role"
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                style={{
+                  width: "100%",
+                  padding: "10px",
+                  marginTop: "10px",
+                  marginBottom: "20px",
+                  borderRadius: "10px",
+                  border: "1px solid #ccc",
+                  backgroundColor: "#dce6eb"
+                }}
+              >
+                <option style={{ backgroundColor: "#dce6eb"}} value="user">Kullanıcı girişi</option>
+                <option value="instructor">Eğitmen girişi</option>
+                <option value="admin">Admin girişi</option>
+              </select>
             </div>
 
             <div className="actions">
@@ -95,7 +125,7 @@ function LoginPage() {
               </div>
             </div>
             <div className="login-choice">
-              <p className="login-p">Hesabınız Yok mu? Kaydolun.</p>
+              <p onClick={()=>navigate("/signup")} className="login-p">Hesabınız Yok mu? Kaydolun.</p>
             </div>
           </div>
         </form>
