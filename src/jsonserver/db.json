@@ -1,9 +1,23 @@
 {
-    "users": [
-        {
-            "id": "13664",
-            "username": "betul",
-            "password": "btl"
-          }
-    ]
-  }
+  "users": [
+    {
+      "id": "13664",
+      "username": "betul",
+      "password": "btl"
+    },
+    {
+      "id": "252d",
+      "username": "Betul",
+      "email": "123456@gmail.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": "b19e",
+      "username": "Betül Turan",
+      "email": "246810@gmail.com",
+      "password": "246810",
+      "role": "user"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
-import axios from 'axios';
+import axios from "axios";
 
 class LoginPageService {
   login() {
-    return new Promise((resolve, reject) => {
-      axios
-        .get("/users")
-        .then((response) => resolve(response.data))
-        .catch((error) => reject(error));
-    });
+    return axios
+      .get("http://localhost:5000/users") // Doğru endpointi kontrol edin
+      .then((response) => response.data)
+      .catch((error) => {
+        throw new Error("Kullanıcı verileri alınamadı.");
+      });
   }
 }
 
